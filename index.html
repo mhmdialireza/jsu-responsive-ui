@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="./dist/font.css">
+    <title>jsu - responsive - ui</title>
+</head>
+
+<body dir="rtl" class="h-screen relative transition-all duration-700 bg-gray-100">
+    <div id="blur-element" class="fixed top-0 right-0 left-0 bottom-0 backdrop-blur-sm z-10 hidden"></div>
+    <header
+        class="w-full h-14 bg-gradient-to-r from-primary via-secondary to-primary flex justify-between items-center px-4 text-white fixed top-0">
+        <img id="hamburger" src="./public/bars-white.svg" class="w-4 cursor-pointer fill-white lg:hidden"></img>
+        <h2 class="xl:text-lg xl:w-48 lg:text-base lg:w-44 hidden lg:block transition-all duration-700">سامانه مدیریت
+            کلاس ها</h2>
+        <section class="text-white hidden lg:flex justify-between items-center">
+            <ul class="flex gap-5 lg:gap-1 justify-between items-center">
+                <li class="cursor-pointer">
+                    <a href="./index.html" class="lg:text-sm lg:p-2 xl:text-base xl:p-3 transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0 before:h-0.5  before:bottom-0 before:right-0 before:bg-white
+                    hover:before:w-full before:transition-all before:duration-700">خانه</a>
+                </li>
+                <li class="cursor-pointer dropdown relative">
+                    <a class="lg:text-sm lg:p-2 xl:text-base xl:p-3 transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0 before:h-0.5  before:bottom-0 before:right-0 before:bg-white
+                    hover:before:w-full before:transition-all before:duration-700 flex items-center gap-1">
+                        <p>ویرایش اطلاعات</p>
+                        <img class="w-4" src="./public/chevron-down-white.svg" alt="">
+                        <img class="w-4 hidden" src="./public/chevron-up-white.svg" alt="">
+                    </a>
+                    <ul
+                        class="absolute top-12 right-0 transition-all duration-700 bg-secondary p-4 rounded overflow-hidden opacity-0 h-0 flex flex-col gap-3 items-start justify-center">
+                        <li class="cursor-pointer">
+                            <a href="./this-week.html" class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                            before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                            hover:before:h-full before:transition-all before:duration-700">
+                                <p>هفته اخیر</p>
+                            </a>
+                        </li>
+                        <li class="cursor-pointer">
+                            <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                        before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                        hover:before:h-full before:transition-all before:duration-700 ">
+                                <p>نامشخص ها</p>
+                            </a>
+                        </li>
+                        <li class="cursor-pointer">
+                            <a class="transition-all duration-1000 hover:text-blue-200 text-white relative 
+                        before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                        hover:before:h-full before:transition-all before:duration-700 ">
+                                <p>مجوز ویرایش</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="cursor-pointer">
+                    <a class="lg:text-sm lg:p-2 xl:text-base xl:p-3 transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0 before:h-0.5  before:bottom-0 before:right-0 before:bg-white
+                    hover:before:w-full before:transition-all before:duration-700 ">فوق العاده</a>
+                </li>
+                <li class="cursor-pointer">
+                    <a class="lg:text-sm lg:p-2 xl:text-base xl:p-3 transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0 before:h-0.5  before:bottom-0 before:right-0 before:bg-white
+                    hover:before:w-full before:transition-all before:duration-700 ">دروس ترم</a>
+                </li>
+                <li class="cursor-pointer dropdown relative">
+                    <a class="lg:text-sm lg:p-2 xl:text-base xl:p-3 transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0 before:h-0.5  before:bottom-0 before:right-0 before:bg-white
+                    hover:before:w-full before:transition-all before:duration-700 flex items-center gap-1">
+                        <p>دریافت گزارش</p>
+                        <img class="w-4 fill-white" src="./public/chevron-down-white.svg" alt="">
+                        <img class="w-4 hidden" src="./public/chevron-up-white.svg" alt="">
+                    </a>
+                    <ul
+                        class="absolute top-12 bg-secondary transition-all duration-1000 p-4 rounded h-0 opacity-0 overflow-hidden flex flex-col gap-3 items-start justify-center">
+                        <li class="cursor-pointer">
+                            <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                        before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                        hover:before:h-full before:transition-all before:duration-700 ">
+                                <p>دریافت برد</p>
+                            </a>
+                        </li>
+                        <li class="cursor-pointer">
+                            <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                        before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                        hover:before:h-full before:transition-all before:duration-700 ">
+                                <p>کلاسهای آزاد</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="cursor-pointer">
+                    <a href="./send-suggestion.html" class="lg:text-sm lg:p-2 xl:text-base xl:p-3 transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0 before:h-0.5  before:bottom-0 before:right-0 before:bg-white
+                    hover:before:w-full before:transition-all before:duration-700">ارسال پیشنهادات</a>
+                </li>
+                <li class="cursor-pointer">
+                    <a class="lg:text-sm lg:p-2 xl:text-base xl:p-3 transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0 before:h-0.5  before:bottom-0 before:right-0 before:bg-white
+                    hover:before:w-full before:transition-all before:duration-700 " href="#">خروج</a>
+                </li>
+            </ul>
+
+        </section>
+        <div
+            class="xl:text-lg xl:w-48 lg:text-base lg:w-36 lg:flex justify-end items-center transition-all duration-700">
+            دوشنبه 11-02-1402</div>
+    </header>
+    <section id="responsive-nav"
+        class="h-screen w-3/4 bg-primary fixed top-0 left-[100%] -right-3/4 text-white transition-all duration-700 px-6 py-6 flex flex-col justify-between z-20 bg-gradient-to-bl from-primary to-secondary">
+        <div class="flex flex-col gap-6">
+            <div class="flex justify-between items-center lg:hidden">
+                <h2 class="text-xl">سامانه مدیریت کلاس ها</h2>
+                <img id="exit-arrows" src="./public/xmark-white.svg" class="w-4 cursor-pointer fill-white" alt="">
+            </div>
+            <hr class="lg:hidden">
+            <ul class="flex flex-col gap-5">
+                <li class="cursor-pointer">
+                    <a href="./index.html" class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 ">خانه</a>
+                </li>
+                <li class="cursor-pointer responsive-dropdown">
+                    <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 flex items-center gap-1">
+                        <p>ویرایش اطلاعات</p>
+                        <img class="w-4" src="./public/chevron-down-white.svg" alt="">
+                        <img class="w-4 hidden" src="./public/chevron-up-white.svg" alt="">
+                    </a>
+                </li>
+                <ul class="transition-all duration-700 pr-6 -mt-4 overflow-hidden opacity-0 h-0 ">
+                    <li class="cursor-pointer">
+                        <a href="./this-week.html" class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 ">
+                            <p>هفته اخیر</p>
+                        </a>
+                    </li>
+                    <li class="cursor-pointer">
+                        <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 ">
+                            <p>نامشخص ها</p>
+                        </a>
+                    </li>
+                    <li class="cursor-pointer">
+                        <a class="transition-all duration-1000 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 ">
+                            <p>مجوز ویرایش</p>
+                        </a>
+                    </li>
+                </ul>
+                <li class="cursor-pointer">
+                    <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 ">فوق العاده</a>
+                </li>
+                <li class="cursor-pointer">
+                    <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 ">دروس ترم</a>
+                </li>
+                <li class="cursor-pointer responsive-dropdown">
+                    <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 flex items-center gap-1">
+                        <p>دریافت گزارش</p>
+                        <img class="w-4 fill-white" src="./public/chevron-down-white.svg" alt="">
+                        <img class="w-4 hidden" src="./public/chevron-up-white.svg" alt="">
+                    </a>
+                </li>
+                <ul class="transition-all duration-1000 pr-6 -mt-4 h-0 opacity-0 overflow-hidden">
+                    <li class="cursor-pointer">
+                        <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 ">
+                            <p>دریافت برد</p>
+                        </a>
+                    </li>
+                    <li class="cursor-pointer">
+                        <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 ">
+                            <p>کلاسهای آزاد</p>
+                        </a>
+                    </li>
+                </ul>
+                <li class="cursor-pointer">
+                    <a href="./send-suggestion.html" class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 ">ارسال پیشنهادات</a>
+                </li>
+            </ul>
+        </div>
+        <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 " href="#">خروج</a>
+    </section>
+    <!-- <section id="static-nav"
+        class=" bg-primary text-white px-6 py-6 lg:flex flex-col justify-between bg-gradient-to-bl from-primary to-secondary hidden lg:fixed w-1/5 h-[93%] top-14">
+        <div class="flex flex-col gap-6">
+            <div class="flex justify-between items-center lg:hidden">
+                <h2 class="text-xl">سامانه مدیریت کلاس ها</h2>
+                <img id="exit-arrows" src="./public/xmark-white.svg" class="w-4 cursor-pointer fill-white" alt="">
+            </div>
+            <hr class="lg:hidden">
+            <ul class="flex flex-col gap-5">
+                <li class="cursor-pointer">
+                    <a href="./index.html" class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 ">خانه</a>
+                </li>
+                <li class="cursor-pointer dropdown">
+                    <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 flex items-center gap-1">
+                        <p>ویرایش اطلاعات</p>
+                        <img class="w-4" src="./public/chevron-down-white.svg" alt="">
+                        <img class="w-4 hidden" src="./public/chevron-up-white.svg" alt="">
+                    </a>
+                </li>
+                <ul class="transition-all duration-700 pr-6 -mt-4 overflow-hidden opacity-0 h-0 ">
+                    <li class="cursor-pointer">
+                        <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 ">
+                            <p>هفته اخیر</p>
+                        </a>
+                    </li>
+                    <li class="cursor-pointer">
+                        <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 ">
+                            <p>نامشخص ها</p>
+                        </a>
+                    </li>
+                    <li class="cursor-pointer">
+                        <a class="transition-all duration-1000 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 ">
+                            <p>مجوز ویرایش</p>
+                        </a>
+                    </li>
+                </ul>
+                <li class="cursor-pointer">
+                    <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 ">فوق العاده</a>
+                </li>
+                <li class="cursor-pointer">
+                    <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 ">دروس ترم</a>
+                </li>
+                <li class="cursor-pointer dropdown">
+                    <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 flex items-center gap-1">
+                        <p>دریافت گزارش</p>
+                        <img class="w-4 fill-white" src="./public/chevron-down-white.svg" alt="">
+                        <img class="w-4 hidden" src="./public/chevron-up-white.svg" alt="">
+                    </a>
+                </li>
+                <ul class="transition-all duration-1000 pr-6 -mt-4 h-0 opacity-0 overflow-hidden">
+                    <li class="cursor-pointer">
+                        <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 ">
+                            <p>دریافت برد</p>
+                        </a>
+                    </li>
+                    <li class="cursor-pointer">
+                        <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 ">
+                            <p>کلاسهای آزاد</p>
+                        </a>
+                    </li>
+                </ul>
+                <li class="cursor-pointer">
+                    <a href="./send-suggestion.html" class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 ">ارسال پیشنهادات</a>
+                </li>
+            </ul>
+        </div>
+        <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                    before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
+                    hover:before:h-full before:transition-all before:duration-700 " href="#">خروج</a>
+    </section> -->
+    <main class="flex flex-col items-center gap-2 pt-20 pb-4">
+        <div
+            class="w-[95%] lg:hidden grid grid-cols-2 md:grid-cols-4 gap-5 p-5 rounded-lg border-r-4 border-primary bg-gradient-to-r from-blue-200 to-blue-100">
+            <div class="col-span-2 md:col-span-2 flex gap-1">
+                <p>درس:</p>
+                <p>هوش مصنوعی</p>
+            </div>
+            <div class="col-span-2 md:col-span-2 flex gap-1">
+                <p>استاد:</p>
+                <p>موسی موسی زاده</p>
+            </div>
+            <!-- <div class="col-span-2 grid gap-5 transition-all duration-500 scale-y-0 -my-32"> -->
+            <div class="col-span-2 md:col-span-2 transition-all duration-1000 flex gap-2 home-items">
+                <p>کلاس:</p>
+                <p>412</p>
+            </div>
+            <div class="col-span-1 md:col-span-1 transition-all duration-1000 flex gap-1 home-items">
+                <p>ساعت:</p>
+                <p>8-10</p>
+            </div>
+            <div class="col-span-1 md:col-span-1 transition-all duration-1000 flex items-center gap-1 home-items">
+                <p>دو ساعته:</p>
+                <input type="checkbox">
+            </div>
+            <div
+                class="col-span-2 transition-all duration-1000 flex items-center gap-4 md:col-span-2 hidden home-items">
+                <p>جزئیات:</p>
+                <select class="outline-none rounded w-full text-center">
+                    <option value="volvo">تشکیل شد</option>
+                    <option value="saab">ع د</option>
+                    <option value="fiat">ع الف</option>
+                    <option value="audi">ع د الف</option>
+                    <option value="s">ع ش</option>
+                    <option value="c">سایر</option>
+                </select>
+            </div>
+            <div
+                class="transition-all duration-1000 flex items-center gap-4 col-span-2 md:col-span-2 hidden home-items">
+                <p>توضیحات:</p>
+                <input type="text" class="outline-none rounded w-full px-2 py-1">
+            </div>
+            <!-- </div> -->
+            <div class="col-span-2 md:col-span-4 flex justify-center gap-4 lg:col-span-5">
+                <button
+                    class="rounded px-4 py-2  xl:text-base xl:p-2 2xl:p-5 bg-gray-200 hover:bg-gray-300 hover:scale-125 transition-all duration-700 flex items-center justify-center border border-gray-400">برگزار
+                    شد
+                </button>
+                <button
+                    class="rounded px-4 py-2  xl:text-base xl:p-2 2xl:p-5 bg-gray-200 hover:bg-gray-300 hover:scale-125 transition-all duration-700 flex items-center justify-center border border-gray-400">برگزار
+                    نشد
+                </button>
+            </div>
+            <div
+                class="flex items-center justify-center mt-3 col-span-2 md:col-span-4 xl:col-span-6 cursor-pointer home-chvron-change">
+                <img class="w-4 rounded-full" src="./public/chevron-down.svg" alt="">
+                <img class="w-4 rounded-full hidden" src="./public/chevron-up.svg" alt="">
+            </div>
+        </div>
+        <div class="w-[97%] hidden lg:grid grid-cols-18 text-white gap-5 p-2 bg-secondary rounded">
+            <p class="col-span-2 flex items-center justify-center">کلاس</p>
+            <p class="col-span-3 flex items-center justify-center">نام درس</p>
+            <p class="col-span-3 flex items-center justify-center">نام استاد</p>
+            <p class="col-span-1 flex items-center justify-center">ساعت</p>
+            <p class="col-span-2 flex items-center justify-center">جزئیات</p>
+            <p class="col-span-3 flex items-center justify-center">توضیحات</p>
+            <p class="col-span-1 flex items-center justify-center">دو ساعته</p>
+            <p class="col-span-3 flex items-center justify-center">وضعیت</p>
+        </div>
+        <div class="w-[97%] hidden lg:grid grid-cols-18 gap-5 p-5 border-b">
+            <div class="col-span-2 transition-all duration-1000 flex justify-center items-center gap-2 home-items">
+                <p>412</p>
+            </div>
+            <div class="col-span-3 flex justify-center items-center gap-1">
+                <p>هوش مصنوعی</p>
+            </div>
+            <div class="col-span-3 flex justify-center items-center gap-1">
+                <p>موسی موسی زاده</p>
+            </div>
+            <div class="col-span-1 transition-all duration-1000 flex justify-center items-center gap-1 home-items ">
+                <p>8-10</p>
+            </div>
+            <div class="col-span-2 transition-all duration-1000 flex justify-center items-center gap-4 home-items">
+                <select class="outline-none rounded w-full text-center border">
+                    <option value="volvo">تشکیل شد</option>
+                    <option value="saab">ع د</option>
+                    <option value="fiat">ع الف</option>
+                    <option value="audi">ع د الف</option>
+                    <option value="s">ع ش</option>
+                    <option value="c">سایر</option>
+                </select>
+            </div>
+            <div class="col-span-3 transition-all duration-1000 flex justify-center items-center gap-4 home-items">
+                <input type="text" class="outline-none border rounded w-full px-2 py-1">
+            </div>
+            <div class="col-span-1 transition-all duration-1000 flex justify-center items-center gap-1 home-items">
+                <input type="checkbox">
+            </div>
+            <div class="col-span-3 flex justify-center gap-1 lg:gap-4 ">
+                <button
+                    class="rounded border-gray-400 text-xs p-2 xl:text-base xl:p-2 2xl:p-5 bg-gray-200 hover:bg-gray-300 hover:scale-125 transition-all duration-700 flex items-center justify-center border">برگزار
+                    شد
+                </button>
+                <button
+                    class="rounded border-gray-400 text-xs p-2 xl:text-base xl:p-2 2xl:p-5 bg-gray-200 hover:bg-gray-300 hover:scale-125 transition-all duration-700 flex items-center justify-center border">برگزار
+                    نشد
+                </button>
+            </div>
+        </div>
+    </main>
+    <script src="./dist/script.js"></script>
+</body>
+
+</html>
