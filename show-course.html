@@ -34,8 +34,8 @@
                     </a>
                     <ul
                         class="absolute top-12 right-0 transition-all duration-700 bg-secondary p-4 rounded overflow-hidden opacity-0 h-0 flex flex-col gap-3 items-start justify-center">
-                        <li class="cursor-pointer">
-                            <a href="./this-week.html" class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                        <li href="this-week.html" class="cursor-pointer">
+                            <a class="transition-all duration-700 hover:text-blue-200 text-white relative 
                             before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
                             hover:before:h-full before:transition-all before:duration-700">
                                 <p>هفته اخیر</p>
@@ -135,7 +135,7 @@
                 </li>
                 <ul class="transition-all duration-700 pr-6 -mt-4 overflow-hidden opacity-0 h-0 ">
                     <li class="cursor-pointer">
-                        <a href="./this-week.html" class="transition-all duration-700 hover:text-blue-200 text-white relative 
+                        <a href="this-week.html" class="transition-all duration-700 hover:text-blue-200 text-white relative 
                     before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
                     hover:before:h-full before:transition-all before:duration-700 ">
                             <p>هفته اخیر</p>
@@ -202,147 +202,40 @@
                     before:absolute before:w-0.5 before:h-0 before:-mr-2 before:top-0 before:right-0 before:bg-white
                     hover:before:h-full before:transition-all before:duration-700 " href="#">خروج</a>
     </section>
-    <main class="flex flex-col items-center justify-center pt-20">
-        <div class="w-[90%] flex flex-col justify-center items-center border-2 rounded">
-            <div
-                class="flex flex-col gap-5 justify-center items-center p-4 transition-all duration-700 w-full sm:w-[90%] lg:w-[80%] xl:w-[70%] 2xl:w-[60%]">
-                <p class="font-bold lg:text-xl xl:text-2xl transition-all duration-700">جست و جو</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 w-full transition-all duration-700">
-                    <div class="flex flex-col col-span-1 md:col-span-3 gap-1">
-                        <p>نوع جست و جو:</p>
-                        <select id="serach-type" class="border py-2 px-4 w-full outline-none">
-                            <option value="teacher">استاد</option>
-                            <option value="time">زمان</option>
-                        </select>
-                    </div>
-                    <hr class="col-span-1 md:col-span-3">
-                    <div class="flex flex-col col-span-1 md:col-span-1 gap-1 hidden serach-type-option">
-                        <p>روز:</p>
-                        <select class="border py-2 px-4 w-full outline-none">
-                            <option value="volvo">شنبه</option>
-                            <option value="saab">یک شنبه</option>
-                            <option value="saab">دو شنبه</option>
-                            <option value="saab">سه شنبه</option>
-                            <option value="saab">چهار شنبه</option>
-                            <option value="saab">پنج شنبه</option>
-                        </select>
-                    </div>
-                    <div class="flex flex-col col-span-1 md:col-span-1 gap-1 hidden serach-type-option">
-                        <p>از ساعت:</p>
-                        <select class="border py-2 px-4 w-full outline-none">
-                            <option value="volvo">8</option>
-                            <option value="volvo">9</option>
-                            <option value="volvo">10</option>
-                            <option value="volvo">12</option>
-                            <option value="volvo">13</option>
-                            <option value="volvo">14</option>
-                            <option value="volvo">15</option>
-                            <option value="volvo">16</option>
-                            <option value="volvo">17</option>
-                            <option value="volvo">18</option>
-                            <option value="volvo">19</option>
-                            <option value="volvo">20</option>
-                        </select>
-                    </div>
-                    <div class="flex flex-col col-span-1 md:col-span-1 gap-1 hidden serach-type-option">
-                        <p>تا ساعت:</p>
-                        <select class="border py-2 px-4 w-full outline-none">
-                            <option value="volvo">8</option>
-                            <option value="volvo">9</option>
-                            <option value="volvo">10</option>
-                            <option value="volvo">12</option>
-                            <option value="volvo">13</option>
-                            <option value="volvo">14</option>
-                            <option value="volvo">15</option>
-                            <option value="volvo">16</option>
-                            <option value="volvo">17</option>
-                            <option value="volvo">18</option>
-                            <option value="volvo">19</option>
-                            <option value="volvo">20</option>
-                        </select>
-                    </div>
-                    <input class="col-span-1 md:col-span-3 border py-2 px-4 w-full outline-none serach-type-option"
-                        type="text" placeholder="بخشی از نام استاد">
-                    <button type="submit"
-                        class="col-span-1 md:col-span-3 rounded px-10 py-2 transition-all duration-700 bg-secondary hover:bg-primary text-white flex items-center justify-center lg:w-48 m-auto">جست
-                        و جو</button>
-                </div>
-
+    <main class="flex flex-col items-center gap-2 pt-20 pb-4">
+        <div class="w-[97%] rounded flex flex-col divide-y-2">
+            <div class="bg-secondary text-white rounded p-3">اطلاعات درس</div>
+            <div class="p-5 flex gap-2">
+                <p>استاد:</p>
+                <p>مهدی عنایت زارع</p>
             </div>
-        </div>
-
-        <div class="inline-flex items-center justify-center w-[70%] transition-all duration-700">
-            <hr class="w-full h-px my-8 lg:my-16 bg-primary border-0  transition-all duration-700">
-            <span id="divider" class="absolute px-3 font-medium bg-gray-100 lg:text-lg">نتایج</span>
-        </div>
-
-        <div class="w-[90%]">
-            <div
-                class="w-[95%] lg:hidden grid grid-cols-2 md:grid-cols-4 gap-5 p-5 rounded-lg border border-primary bg-white">
-                <div class="col-span-2 md:col-span-2 flex gap-1">
-                    <p>درس:</p>
-                    <p>هوش مصنوعی</p>
-                </div>
-                <div class="col-span-2 md:col-span-2 flex gap-1">
-                    <p>استاد:</p>
-                    <p>موسی موسی زاده</p>
-                </div>
-                <div class="col-span-2 md:col-span-2 transition-all duration-1000 flex gap-2">
-                    <p>کلاس:</p>
-                    <p>412</p>
-                </div>
-                <div class="col-span-2 md:col-span-2 transition-all duration-1000 flex gap-1">
-                    <p>روز:</p>
-                    <p>شنبه</p>
-                </div>
-                <div class="col-span-2 md:col-span-2 transition-all duration-1000 flex gap-1">
-                    <p>ساعت:</p>
-                    <p>8-10</p>
-                </div>
-                <div class="col-span-2 md:col-span-2 flex justify-center items-center md:justify-start gap-4 lg:col-span-5">
-                    <a class="flex items-center justify-center border rounded p-1 bg-green-700 transition-all duration-700"
-                        href="#"><img class="w-5 h-5 lg:w-6 lg:h-6 transition-all duration-700"
-                            src="./public/show-white.svg" alt=""></a>
-                    <a class="flex items-center justify-center border rounded p-1 bg-red-700 transition-all duration-700"
-                        href="#"><img class="w-5 h-5 lg:w-6 lg:h-6 transition-all duration-700"
-                            src="./public/edit-white.svg" alt=""></a>
-                </div>
+            <div class="p-5 flex gap-2">
+                <p>درس:</p>
+                <p>طراحی الگوریتم</p>
             </div>
-
-            <div
-                class="w-[100%] hidden lg:grid grid-cols-12 justify-evenly items-center text-white gap-1 text-xs xl:text-base lg:gap-5 py-3 bg-secondary rounded">
-                <p class="flex col-span-3 items-center justify-center font-bold xl:text-lg transition-all duration-700">
-                    نام استاد
-                </p>
-                <p class="flex col-span-3 items-center justify-center font-bold xl:text-lg transition-all duration-700">
-                    نام درس</p>
-                <p class="flex col-span-2 items-center justify-center font-bold xl:text-lg transition-all duration-700">
-                    کلاس</p>
-                <p class="flex col-span-q items-center justify-center font-bold xl:text-lg transition-all duration-700">
-                    روز</p>
-                <p class="flex col-span-1 items-center justify-center font-bold xl:text-lg transition-all duration-700">
-                    ساعت</p>
-                <p class="flex col-span-2 items-center justify-center font-bold xl:text-lg transition-all duration-700">
-                    عملیات ها
-                </p>
+            <div class="p-5 flex gap-2">
+                <p>گروه درس:</p>
+                <p>1</p>
             </div>
-            <div
-                class="w-[100%] hidden lg:grid grid-cols-12 justify-evenly items-center gap-1 text-xs xl:text-base lg:gap-5 py-3 border-b">
-                <p class="flex col-span-3 items-center justify-center xl:text-lg transition-all duration-700">موسی موسی
-                    زاده</p>
-                <p class="flex col-span-3 items-center justify-center xl:text-lg transition-all duration-700">هوش مصنوعی
-                </p>
-                <p class="flex col-span-2 items-center justify-center xl:text-lg transition-all duration-700">401</p>
-                <p class="flex col-span-1 items-center justify-center xl:text-lg transition-all duration-700">شنبه</p>
-                <p class="flex col-span-1 items-center justify-center xl:text-lg transition-all duration-700">8-10</p>
-                <div class="flex col-span-2 items-center justify-center gap-1 lg:gap-4 transition-all duration-700">
-                    <a class="flex items-center justify-center border rounded p-1 bg-green-700 transition-all duration-700"
-                        href="#"><img class="w-5 h-5 lg:w-6 lg:h-6 transition-all duration-700"
-                            src="./public/show-white.svg" alt=""></a>
-                    <a class="flex items-center justify-center border rounded p-1 bg-red-700 transition-all duration-700"
-                        href="#"><img class="w-5 h-5 lg:w-6 lg:h-6 transition-all duration-700"
-                            src="./public/edit-white.svg" alt=""></a>
-                </div>
+            <div class="p-5 flex gap-2">
+                <p>گروه آموزشی:</p>
+                <p>کامپیوتر</p>
+            </div>
+            <div class="p-5 flex gap-2">
+                <p>نوع درس</p>
+                <p>تخصصی</p>
+            </div>
+            <div class="p-5 flex gap-2">
+                <p>تعداد دانشجویان:</p>
+                <p>28</p>
+            </div>
+            <div class="p-5 flex gap-2">
+                <p>زمان:</p>
+                <p>شنبه 8 تا 10</p>
+            </div>
+            <div class="p-5 flex gap-2">
+                <p>کلاس:</p>
+                <p>403</p>
             </div>
         </div>
     </main>
