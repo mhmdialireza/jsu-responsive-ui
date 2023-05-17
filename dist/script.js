@@ -1,9 +1,9 @@
-const hamberger = document.querySelector('#hamburger')
+const hamburger = document.querySelector('#hamburger')
 const exitArrows = document.querySelector('#exit-arrows')
 const blurElement = document.querySelector('#blur-element')
 const responsiveNav = document.querySelector('#responsive-nav')
 
-hamberger.addEventListener('click', () => {
+hamburger.addEventListener('click', () => {
     responsiveNav.classList.remove('-right-3/4')
     responsiveNav.classList.remove('left-[100%]')
     responsiveNav.classList.add('right-0')
@@ -102,12 +102,12 @@ showTab.addEventListener('click', () => {
     tabDivider.innerHTML = showTabText
 })
 
-const serachTypeOptions = document.querySelectorAll('.serach-type-option')
-const serachTypedropdownToggle = document.querySelector('#serach-type')
-console.log(serachTypedropdownToggle);
-serachTypedropdownToggle.addEventListener('change', () => {
-    // const value = serachTypedropdownToggle.options[serachTypedropdownToggle.selectedIndex].value
-    serachTypeOptions.forEach(serachTypeOptions => {
-        serachTypeOptions.classList.toggle('hidden')
+const searchTypeOptions = document.querySelectorAll('.serach-type-option')
+const searchTypeDropdownToggle = document.querySelector('#serach-type')
+console.log(searchTypDropdownToggle);
+searchTypeDropdownToggle.addEventListener('change', () => {
+    // const value = searchTypeDropdownToggle.options[searchTypeDropdownToggle.selectedIndex].value
+    searchTypeOptions.forEach(searchTypeOptions => {
+        searchTypeOptions.classList.toggle('hidden')
     })
 })

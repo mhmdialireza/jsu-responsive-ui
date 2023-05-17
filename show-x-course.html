@@ -14,7 +14,7 @@
     <div id="blur-element" class="fixed top-0 right-0 left-0 bottom-0 backdrop-blur-sm z-10 hidden"></div>
     <header
         class="w-full h-14 bg-gradient-to-r from-primary via-secondary to-primary flex justify-between items-center px-4 text-white fixed top-0">
-        <img id="hamburger" src="./public/bars-white.svg" class="animate-spin w-4 cursor-pointer fill-white lg:hidden"></img>
+        <img id="hamburger" src="./public/bars-white.svg" class="w-4 cursor-pointer fill-white lg:hidden"></img>
         <h2 class="xl:text-lg xl:w-48 lg:text-base lg:w-44 hidden lg:block transition-all duration-700">سامانه مدیریت
             کلاس ها</h2>
         <section class="text-white hidden lg:flex justify-between items-center">
@@ -203,38 +203,25 @@
                     hover:before:h-full before:transition-all before:duration-700 " href="#">خروج</a>
     </section>
     <main class="flex flex-col items-center justify-center pt-20">
-        <div class="w-[90%] flex flex-col justify-center items-center border-2 rounded">
-            <div class="flex flex-col gap-5 justify-center items-center p-4 w-full">
-                <p class="font-bold lg:text-xl xl:text-2xl transition-all duration-700">جست و جو</p>
-                <div class="flex flex-col lg:flex-row gap-3 w-full transition-all duration-700">
-                    <input id="search-ctl-id" class="border py-2 px-4 w-full outline-none" type="text" placeholder="بخشی از نام استاد">
-                    <button onclick="getData()"
-                        class="rounded px-10 py-2 transition-all duration-300 bg-gradient-to-r from-secondary via-black via-80% to-primary text-white bg-size-200 flex items-center justify-center hover:bg-gradient-to-l bg-pos-0 hover:bg-pos-100 lg:w-48">جست
-                        و جو</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="inline-flex items-center justify-center w-[70%]  transition-all duration-700">
-            <hr class="w-full h-px my-8 lg:my-16 bg-primary border-0  transition-all duration-700">
-            <span id="divider" class="absolute px-3 font-medium  bg-white lg:text-lg">نتایج</span>
-        </div>
-
-        <div id="show-section" class="w-[90%]">
+        <div class="w-[97%] flex flex-col items-center justify-center gap-3">
+            <div class="w-full border-2 rounded p-4 text-center font-bold text-xl">آمار احتمال مهندسی</div>
             <div
-                class="w-[100%] flex justify-evenly items-center text-white gap-1 text-xs lg:text-base lg:gap-5 py-3 bg-secondary rounded">
-                <p class="flex items-center justify-center font-bold lg:text-lg transition-all duration-700">نام استاد</p>
-                <p class="flex items-center justify-center font-bold lg:text-lg transition-all duration-700">نام درس</p>
-                <p class="flex items-center justify-center font-bold lg:text-lg transition-all duration-700">عملیات ها</p>
+                class="w-full flex justify-evenly items-center text-white gap-1 text-xs lg:text-base lg:gap-5 py-3 bg-secondary rounded">
+                <p class="w-full flex items-center justify-center">روز</p>
+                <p class="w-full flex items-center justify-center">تاریخ</p>
+                <p class="w-full flex items-center justify-center">ساعت</p>
+                <p class="w-full flex items-center justify-center">وضعیت</p>
+                <p class="w-full flex items-center justify-center">عملیات ها</p>
             </div>
-            <div class="w-[100%] flex justify-evenly items-center gap-1 text-xs lg:text-base lg:gap-5 py-3 border-b">
-                <p class="flex items-center justify-center lg:text-lg transition-all duration-700">موسی موسی زاده</p>
-                <p class="flex items-center justify-center lg:text-lg transition-all duration-700">هوش مصنوعی</p>
-                <div class="flex items-center justify-center gap-1 lg:gap-4">
-                    <a class="flex items-center justify-center border rounded p-1 bg-green-700 transition-all duration-700" href="#"><img
-                            class="w-5 h-5 lg:w-6 lg:h-6 transition-all duration-700" src="./public/show-white.svg" alt=""></a>
-                    <a class="flex items-center justify-center border rounded p-1 bg-red-700 transition-all duration-700" href="#"><img
-                            class="w-5 h-5 lg:w-6 lg:h-6 transition-all duration-700" src="./public/add-white.svg" alt=""></a>
+
+            <div class="w-full flex justify-evenly items-center gap-1 text-xs lg:text-base lg:gap-5 py-3 border-b">
+                <p class="w-full flex items-center justify-center">شنبه</p>
+                <p class="w-full flex items-center justify-center">1401-11-23</p>
+                <p class="w-full flex items-center justify-center">8 تا 12</p>
+                <p class="w-full flex items-center justify-center">تایید شده</p>
+                <div class="w-full flex items-center justify-center gap-1 lg:gap-4">
+                    <a class="flex items-center justify-center border rounded p-0.5 bg-red-700" href="#"><img
+                            class="w-4 h-4 lg:w-6 lg:h-6" src="./public/trash-can-white.svg" alt=""></a>
                 </div>
             </div>
         </div>
